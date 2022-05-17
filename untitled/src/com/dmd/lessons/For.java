@@ -5,7 +5,7 @@ public class For {
 //        for (int i = 0; i < 10; i++) {
 //            //для БЫСТРОГО написания цыкла for пишем "fori"
 //        }
-       forExampe();
+       //forExampe();
        forContinue();
 
     }
@@ -30,6 +30,7 @@ public class For {
             if (i == 5){
                 continue;
             }
+            System.out.println(i + " ");
         }
     }
 
