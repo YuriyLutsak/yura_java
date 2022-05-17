@@ -3,6 +3,8 @@ package com.tasksOfYarik;
 public class sevenLastnumber {
     public static void main(String[] args) {
 
+      //  Задание 11.17 Напишите класс, который выводит на экран в строку положительные трехзначные числа, заканчивающиеся на 7 (в возрастающем порядке). Числа должны отделяться друг от друга знаком «пробел».
+
     }
     public static void seven() {
         for (int i = 107; i <= 997; i = i + 10) {
