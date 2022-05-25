@@ -5,13 +5,23 @@ import java.util.Scanner;
 public class If_New {
     public static void main(String[] args) {
 
-        char number = 'a';
+       /* char number = 'a';
         int n = number;
         System.out.println(number);   // => a
         System.out.println("number"); // строка
         System.out.println(n);        // => вывод цифрового значения
+*/
 
+triangle();
+        triangle();
+        triangle();
 
+        triangle();
+        triangle();
+        triangle();
+        triangle();
+        triangle();
+        triangle();
 
     }
 public static void symbol(){
@@ -54,27 +64,38 @@ public static void symbol(){
 //        равнобедренный если 2 угла равны,
 //        равносторонний если все углы равны.
 
+        // какой вид триугольника и является ли он равнобедренным
+
         Scanner scan = new Scanner(System.in);
         System.out.println("Your first value? ");
         int value = scan.nextInt();
         System.out.println("Your second value? ");
         int value2 = scan.nextInt();
+        int value3 = 180 - value - value2;
 
 
         if (value + value2 >= 180) {
             System.out.println(" mistake data");
-        }
-        else if(value == 60 && value2 == 60) {
-            System.out.println(" ravnostoronniy");
-        }
-        else if (value == value2 && value < 90 && value2 < 90) {
-            System.out.println(" ravnobedrenniy, tupougolniy");
-        }
-        else if (value > 90 || value2 > 90){
-            System.out.println(" tupougolniy");
-        }
-        else {
-            System.out.println(" ostrougolniy");
+        } else {
+
+            if (value == 90 || value2 ==90 || value3 == 90) {
+                System.out.print("priamougolnii, ");
+            } else if (value > 90 || value2 > 90 || value3 > 90) {
+                System.out.print("tupouholnii, ");
+            } else {
+                System.out.print("ostrouhol, ");
+
+                if (value == value2 && value == value3 && value2 == value3) {
+                    System.out.println("ravnostoronnii");
+                    return;
+                }
+            }
+
+            if (value == value2 || value2 == value3 || value == value3) {
+                System.out.println("ravnobedrenii");
+            } else {
+                System.out.println("raznostoronnii");
+            }
         }
 
 

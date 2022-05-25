@@ -29,14 +29,17 @@ public class NewRandom {
         }
 
 
-            int qwe = (int) (Math.random());
-          //  System.out.println(qwe);
 
-        int a = 10;
-        int b = 99;
-        int res = (int) (Math.random() + 6) * a + b - 18;
+        int ranNum = (int) (Math.random() * 100);
+        System.out.println(ranNum);
 
-        System.out.println(res);
+
+        int min = 10;
+        int max = 99;
+        int range = max - min + 1;
+        int randomNumber = (int) (Math.random() * range) + min;
+
+       // System.out.println(randomNumber);
         }
 
 
