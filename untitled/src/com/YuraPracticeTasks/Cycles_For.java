@@ -60,7 +60,7 @@ public class Cycles_For {
             currant = scanner.nextInt();
 
             System.out.println("prev = " + prev + "\ncurrant = " + currant);
-            if (counter > prev) {
+            if (currant > prev) {
                 counter++;
             }
 
@@ -94,7 +94,7 @@ public class Cycles_For {
 
         }
 
-        System.out.println(" " + counterOdd + );
+        System.out.println(" " + counterOdd );
 
     }
 
@@ -105,6 +105,7 @@ public class Cycles_For {
         Scanner scanner = new Scanner(System.in);
         System.out.println("Enter amount of numbers: ");
         int amountNumbers = scanner.nextInt();//3
+        System.out.println("Enter number");
         int temp;
         int counter = 0;
 
@@ -116,8 +117,7 @@ public class Cycles_For {
                     counter++; // 1 2
                 }
             }
-
-        System.out.println(counter);
+        System.out.println(counter + " positive numbers");
         }
 
 
