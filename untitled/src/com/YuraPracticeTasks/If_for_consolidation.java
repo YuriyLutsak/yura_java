@@ -20,7 +20,6 @@ whatIsNumber();
         whatIsNumber();
         whatIsNumber();
         whatIsNumber();
-        whatIsNumber();
 
     }
     public static void whatIsNumber(){
