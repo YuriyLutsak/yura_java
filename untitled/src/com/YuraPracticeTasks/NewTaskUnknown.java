@@ -1,5 +1,6 @@
 package com.YuraPracticeTasks;
 
+import java.util.Random;
 import java.util.Scanner;
 
 public class NewTaskUnknown {
@@ -7,9 +8,17 @@ public class NewTaskUnknown {
 //centimeter();
 //currencyExchange();
 //  scoreUnderCover();
-        backwardPlusNum();
+       // backwardPlusNum();
 
 
+        Random ran = new Random();
+        for (int i = 0; i < 6; i++) {
+            int value  = ran.nextInt(6) + 1;
+            System.out.println(value);
+        }
+//
+//        int n = (int) (Math.random());
+//        System.out.println(n);
 
 
 
@@ -48,11 +57,25 @@ public class NewTaskUnknown {
 
         Scanner scanner = new Scanner(System.in);
         System.out.println(" enter three-digital value: ");
-        int val = scanner.nextInt();
+        int val = scanner.nextInt();//456789
+                        int division = 10;
+                        int counter = 0;
+        int val3 =  val % 10;          // 9      -
+        int val2 =  val / 10 % 10;     // 45678  -
+        int val1 =  val / 100 % 10;    // 4567
+        int val0 =  val / 1000 % 10;   // 456
+        int val01 = val / 10000 % 10;  // 45
+        int val02 = val / 100000;      // 4
+        int val03 = val / 1000000;     // 0
 
-        int val1 = val / 100;
-        int val2 = val / 10 % 10;
-        int val3 = val % 10;
+        while (val / division != 0){
+            division = division * 10;
+            counter++;
+        }
+
+//        int val1 = val / 100;
+//        int val2 = val / 10 % 10;
+//        int val3 = val % 10;
 
         System.out.println(val1 + " " + val2 + " " + val3);
         System.out.println(val3 + " " + val2 + " " + val1);

@@ -5,12 +5,45 @@ import java.util.Scanner;
 
 public class CycleScannerPlusCounter {
     public static void main(String[] args) {
-        //previousCurrent();
+
+
+        previousCurrent();
         //random();
- schoolMark();
+       // schoolMark();
+
+        // minMaxValue();
+
     }
 
-    public static void schoolMark(){
+    public static void minMaxValue() {
+        // 14_1
+        // Напишите клас который принимает n целых чисел и выводит самое меньшее и самое большее.
+
+        Scanner scan = new Scanner(System.in);
+        System.out.println(" After finish push ' = ' and get result of min and max value.");
+        int minVal = 0;
+        int maxVal = scan.nextInt();
+
+        int temp;
+
+        int min;
+        String res = "";
+
+        for (int i = 0; ; i++) {
+            System.out.println("enter number: "); // 1 5 7 9 22 4 8
+            maxVal = scan.nextInt();
+            temp = scan.nextInt();
+
+            if (temp > maxVal) {
+                maxVal = temp;
+            }
+
+        }
+        //System.out.println(" max = " + maxVal);
+    }
+
+
+    public static void schoolMark() {
 //        Задание 12.10
 //        Контрольная работа считается «провальной»,
 //        если более половины учеников получили неудовлетворительные оценки.
@@ -21,44 +54,61 @@ public class CycleScannerPlusCounter {
         Scanner scanner = new Scanner(System.in);
         System.out.println("enter amount of students: ");
         int amountOfStudents = scanner.nextInt();
+
+
         System.out.println("enter first mark: "); //нулевая оценка в цикле будет
         int previousMark = scanner.nextInt();
 
         int currentMark = 0; // int делаем здесь, чтоб выделтть память и только обращаться к назвагию в дальнейшем, а не выделять память
         int sumMark = 0;
-        int counter = 0;
+        int markQuantity = 0;
+
 
         for (int i = 1; i < amountOfStudents; i++) { // стартуем с единицы т.к. нулевая оценка уже есть выше
-            System.out.println("next mark: ");
+            System.out.println("enter mark: ");
             currentMark = scanner.nextInt();
+
             System.out.println("prev: " + previousMark + " current: " + currentMark);
 
-        sumMark = previousMark + currentMark + currentMark;
-            counter++;
-        previousMark = currentMark;
+            currentMark = previousMark;
+
+            sumMark = sumMark + currentMark; // 5 + 3 + 4 + 5
+            markQuantity++;
+
         }
         System.out.println(sumMark);
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
     }
 
-    public static void random(){
- //        Задание 12.5
+
+    public static void yarikSolutionOfSchool() {
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("enter num q-ty students: ");
+        int numStudents = scanner.nextInt();  // 10
+
+        int counter = 0;
+
+        double countQuality = 0;
+        // 10    // 2
+        for (int i = 0; i <= numStudents; i++) {
+            System.out.println(i + " enter num Student Quality :  ");
+            int numStudentQuality = scanner.nextInt();
+            // mark               mark                 mark
+            countQuality = countQuality + numStudentQuality;
+            counter++;// тупо считает колтчество условий.
+        }
+
+
+        if (countQuality / numStudents < 4) {
+            System.out.println("more half students is fail" + counter);
+        } else {
+            System.out.println("++++++++" + counter);
+        }
+    }
+
+    public static void random() {
+        //        Задание 12.5
 //        Напишите класс, который генерирует 15 целых чисел в интервале от -25 до 25, печатает их,
 //        а затем выводит на экран информацию о том, сколько из них были:
 //• положительными;
@@ -77,10 +127,10 @@ public class CycleScannerPlusCounter {
         int counterSingle = 0;
 
         for (int i = 0; i < 3; i++) {
-            int random = ran.nextInt(- 25, 25); //8
+            int random = ran.nextInt(-25, 25); //8
             System.out.print(random + " ");
 
-            if (random / 10 == 0){
+            if (random / 10 == 0) {
                 counterSingle++;
             }
 
@@ -88,7 +138,7 @@ public class CycleScannerPlusCounter {
                 counterEven++;
             }
 
-            if(random >= 0){
+            if (random >= 0) {
                 counterPositive++; // почему всегда меньше на одно число?  Потому что на елсе всегда остановка идет и в него не заходит.
 
             }
@@ -101,19 +151,19 @@ public class CycleScannerPlusCounter {
         System.out.println("\nPositive:  " + counterPositive + " \nEven: " + counterEven + "\nSingle: " + counterSingle);
     }
 
-    public static void previousCurrent(){
+    public static void previousCurrent() {
         // Задание 12.4
         // Напишите класс, который принимает с клавиатуры 17 целых чисел и выводит на экран информацию о том,
         // сколько из них были больше, чем предыдущее число.
 
         Scanner scan = new Scanner(System.in);
         System.out.println("Enter amount of numbers: in this case its = 17");
-        int amount  = scan.nextInt();
+        int amount = scan.nextInt();
 
-        System.out.println("Enter first(previous) number");
+        System.out.println("Enter first (previous) number");
         int previous = scan.nextInt();
 
-        int current  = 0;
+        int current = 0;
         int counter = 0;
 
         for (int i = 1; i < amount; i++) {
@@ -121,8 +171,8 @@ public class CycleScannerPlusCounter {
             current = scan.nextInt();//
             System.out.println(previous + " - previous " + current + " - current");
 
-            if (current > previous) {
-               counter +=9; //оно яблоко выьрал - 9 бубочек передвинул
+            if (current > previous) {  //true
+                counter++; //оно яблоко выьрал - 9 бубочек передвинул  // counter =counter +1  идет кака датчик движения
             }
             previous = current;
 
@@ -131,7 +181,7 @@ public class CycleScannerPlusCounter {
         System.out.println(counter + " are bigger then previous");
     }
 
-    public static void evenOdd(){
+    public static void evenOdd() {
 
 //        Задание 12.2
 //        Напишите класс, который принимает с клавиатуры 15 целых чисел и выводит на экран информацию о том,
@@ -150,12 +200,12 @@ public class CycleScannerPlusCounter {
             System.out.println("Enter value: " + value); // int value = scan.nextInt(); здесь нельзя создавать эти переменные
             value = scan.nextInt();
 
-            if (value > 0){
-               // int counterEven = 0;
+            if (value > 0) {
+                // int counterEven = 0;
                 counterEven++;
 
-            }else {
-              //  int counterOdd = 0;
+            } else {
+                //  int counterOdd = 0;
                 counterOdd++;
             }
         }
@@ -163,7 +213,8 @@ public class CycleScannerPlusCounter {
         System.out.println(counterOdd + " is odd numbers");
 
     }
-    public static void counter(){
+
+    public static void counter() {
         //     Напишите класс, который принимает с клавиатуры 10 целых чисел и выводит на экран информацию о том,
         //     сколько из них бьmи положительными.
 
@@ -177,7 +228,7 @@ public class CycleScannerPlusCounter {
             System.out.println("Enter number");
             int temp = scan.nextInt();
 
-            if (temp > 0){
+            if (temp > 0) {
                 counter++;
             }
         }
