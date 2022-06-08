@@ -22,7 +22,7 @@ public class SameNumbers {
         int sum = valuePrev;// valuePrev = valuePrev + valueNext; // 1 2 3 4 4 = 14
 
         while (valuePrev != valueNext){  // for( ; valuePrev != valueNext; )
-            // System.out.println("your next value");
+
             System.out.println("your next value");
             valuePrev = valueNext;
             valueNext = scanner.nextInt();

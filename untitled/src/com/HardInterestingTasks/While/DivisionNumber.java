@@ -19,7 +19,7 @@ public class DivisionNumber {
 
         Scanner scanner = new Scanner(System.in);
         System.out.println(" enter three-digital value: ");
-        int val = scanner.nextInt();//456789
+        int val = scanner.nextInt();//45678 9
         int counter = 0;
 //        int val3 =  val % 10;          // 9      -
 //        int val2 =  val / 10 % 10;     // 45678  -
