@@ -11,15 +11,40 @@ import java.util.Scanner;
 public class Factorial {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
-        System.out.println(" count of enter nums: ");
-        int numFactor = scanner.nextInt();
-        int count = numFactor - 1;
+        System.out.println(" prevNum of enter nums: ");
+        int numFactor = scanner.nextInt();// 5 * 4 * 3 * 2 * 1    1 * 1 * 2 * 3 * 4 * 5
 
-        while (count > 0) {
-            numFactor = numFactor * (count);
-            count--;
+        int factorRes = 1;
+
+        for (int i = 1; i <= numFactor; i++) {
+            factorRes = factorRes * i;
         }
-        System.out.println(numFactor);
+        System.out.println(factorRes);
+
+        // --------------------------------------------------
+
+//        int factorRes = 1;
+//        int counter = 1;
+//
+//        while(counter <= numFactor){
+//            factorRes = factorRes * counter;
+//            counter++;
+//        }
+//        System.out.println(factorRes);
+
+        // -------------------------------------------------------------
+
+
+//        int prevNum = numFactor - 1;
+//
+//
+//        while (prevNum > 0) {
+//            numFactor = numFactor * prevNum;
+//            prevNum--;  // -1 шаг
+//
+//        }
+//        System.out.println(numFactor);
+//
     }
 }
 
