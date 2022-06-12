@@ -1,4 +1,4 @@
-package com.HardInterestingTasks.Methods;
+package com.HardInterestingTasks.WorkWithNumber;
 
 import java.util.Scanner;
 

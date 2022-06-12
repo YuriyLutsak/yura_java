@@ -5,6 +5,46 @@ import java.util.Scanner;
 
 public class qwerty {
     public static void main(String[] args) {
+
+
+
+
+
+        int val = 123456;
+        int temp;
+        int backWard = 0;
+
+        while (val != 0){
+            temp = val % 10;
+            val = val / 10;
+            System.out.println(val + " " + temp);
+
+            backWard = backWard * 10 + temp;
+            System.out.println(backWard + " ");
+        }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 //        Задание 15.28 типичная задача для вайла))))
 //        Напишите класс, который принимает с клавиатуры целое число и посчитывает число цифр в нем (количество цифр в числе).
 //        Результат подсчета должен быть выведен на экран.
