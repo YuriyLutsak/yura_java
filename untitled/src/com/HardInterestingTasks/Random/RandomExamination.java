@@ -5,10 +5,12 @@ import java.util.Random;
 public class RandomExamination {
     public static void main(String[] args) {
 
+        randomWithoutMath();
+
     }
     public static void dice(){ // эмитация игрального кубика
         Random random = new Random();
-        for (int i = 0; i < 100; i++) { // 10 количество раз
+        for (int i = 0; i < 10; i++) { // 10 количество раз
             System.out.print(random.nextInt(6) + 1 + " "); // + 1 чтоб стартовало с единицы. потому что стартует с нуля. 6 диапазон
         }
     }
