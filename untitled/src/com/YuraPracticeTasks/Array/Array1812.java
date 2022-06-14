@@ -25,10 +25,9 @@ public class Array1812 {
         for (int i = 0; i < array.length; i++) {
 
             array[i] = ran.nextInt(100,999); // array[i] - обращение к массиву, что в него кладем!!!!!!!!!!!!!!!!!!
-            System.out.println(array[i]);
+            System.out.print( i + "; " + array[i] + " ");
 
         }
-
 //        for (int i = 0; i < array.length; i++) {
 //            System.out.println(array[i]);
 //        }

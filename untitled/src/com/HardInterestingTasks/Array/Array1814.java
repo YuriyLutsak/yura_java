@@ -1,5 +1,7 @@
 package com.HardInterestingTasks.Array;
 
+import org.w3c.dom.ls.LSOutput;
+
 import java.util.Random;
 import java.util.Scanner;
 
@@ -24,8 +26,8 @@ public class Array1814 {
         int [] array = new int[scanner.nextInt()];
 
         //заполняем массив
-        for (int i = 0; i < array.length; i++) {
-            array[i] = random.nextInt();
+        for (int i = 0; i < array.length; i++) { // сначала заполняем массив!!!!!!!!!!!!!!!!
+            array[i] = random.nextInt(10,99);
         }
 
         //выводим первую часть l = 5
@@ -36,14 +38,14 @@ public class Array1814 {
         }
 
         for (int i = 0; i < middleOfArray; i++) {
-            array[i] = random.nextInt(10,99);
+
             System.out.print(i + ": " + array[i] + " ");
         }
         System.out.println();
 
         //выподим вторую часть
         for (int i = middleOfArray; i < array.length; i++) {
-            array[i] = random.nextInt(10,99);
+
             System.out.print(i + ": " + array[i] + " ");
         }
 

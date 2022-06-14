@@ -27,14 +27,19 @@ public class Array1818 {
 
         int middleOfArray = array.length / 2;
 
+        for (int i = 0; i < array.length; i++) {
+            array[i] = ran.nextInt(10,99);
+        }
+
         for (int i = 0; i <= middleOfArray; i++) {
-            array[i] = ran.nextInt(100,999);
+
             System.out.print(i + ": " + array[i] + "      ");
         }
+
         System.out.println();
 
         for (int i = array.length - 1; i > middleOfArray ; i--) {
-            array[i] = ran.nextInt(100,999);
+
             System.out.print(i + ": " + array[i] + "      ");
         }
     }

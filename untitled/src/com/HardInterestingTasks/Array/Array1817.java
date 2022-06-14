@@ -1,5 +1,4 @@
 package com.HardInterestingTasks.Array;
-
 import java.util.Random;
 import java.util.Scanner;
 
@@ -35,25 +34,23 @@ public class Array1817 {
         int end = array.length;
         int middle = array.length / 2;
 
+        for (int i = 0; i < end; i++) {
+            array[i] = ran.nextInt(100, 999);                    // сначала заполняем массив!!!!!!!!!!!!!!!!
+        }
 
         for (int i = 0, j = end - 1; i < middle; i++, j--) {
-
-            array[j] = ran.nextInt(100, 999);
-            array[i] = ran.nextInt(100, 999);
+                                                                             // здесь уже не нужно его заполнять, он уже заполнен
             System.out.print(i + ": " + array[i] + "      ");
             System.out.println(+j + ": " + array[j] + "     ");
 
         }
 
-        if (end % 2 != 0) {
-            //middle++;
-            for (int q = middle; middle >= q; q++) {
+        if (end % 2 != 0) {       //5/2 = 2 + 1 7 = 3 + 1
 
-                array[q] = ran.nextInt(100, 999);
-                System.out.print(q + ": " + array[q] + "      ");
-
-            }
+            System.out.print(middle + ": " + array[middle] + "      ");
 
         }
+
+        System.out.println("\nfor example " + array[2]);
     }
 }
