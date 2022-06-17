@@ -9,6 +9,7 @@ package com.YuraPracticeTasks.Array.Methods;
  * и проверяет есть ли там повторяющиеся элементы.
  * Если есть - возвращает TRUE
  */
+rggrr
 
 public class Array1920_RapidNumbers {
     public static void main(String[] args) {
