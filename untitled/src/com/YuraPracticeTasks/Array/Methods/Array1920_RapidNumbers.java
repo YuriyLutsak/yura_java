@@ -52,7 +52,7 @@ public class Array1920_RapidNumbers {
 //                System.out.println("beginning of second for");
 //                System.out.println(j + ": " + arr[j] + "      ");
 //                System.out.println("end of second for");
-                if (arr[j] == arr[j]) {
+                if (arr[i] != arr[j]) {
                    // System.out.println(" not equilse    ");
                     return false;
                 }
