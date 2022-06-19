@@ -1,7 +1,11 @@
 package com.YuraPracticeTasks.Array.Methods;
 
-import java.util.Random;
+import com.YuraPracticeTasks.Array.FillArrayData;
+
 import java.util.Scanner;
+
+import static com.YuraPracticeTasks.Array.FillArrayData.createArray;
+
 
 /**
  * Задание 19.22
@@ -14,8 +18,16 @@ public class Array19_22 {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
 
-        System.out.println("size of array: ");
-        int[] arr = new int[scanner.nextInt()];
+//        System.out.println("size of array: ");
+//        int[] arr = new int[scanner.nextInt()];
+//
+//        for (int i = 0; i < arr.length; i++) {
+//            arr[i] = (int) (Math.random() * 10);
+//        }
+
+
+
+        int[] arr = createArray();
 
         System.out.println(" enter one-digital value: ");
         int value = scanner.nextInt();
@@ -30,7 +42,7 @@ public class Array19_22 {
 
         for (int i = 0; i < arr.length; i++) {
 
-            arr[i] = (int) (Math.random() * 10);
+
             // System.out.println(i + ": " + arr[i] + " suka - psihanul)  ");
 
             if (arr[i] == value) {
